@@ -1,0 +1,36 @@
+<div class="main2">
+<body>
+<div class="room">
+    <form action="/room/start" method="post">
+        <div align="center">
+            <input name="title" placeholder="タイトルを入力">
+        </div>
+
+        <div>
+            人数
+            <input name="number" auttocomplete="on" list="numbers" mutiple>
+            <datalist id="numbers">
+            <option value="5">
+            <option value="6">
+            <option value="7">
+            <option value="8">
+            <option value="9">
+            <option value="10">
+        </div>
+        <%# <div>
+            音楽検索
+            <input type="text" name="artist">
+        </div> %>
+        <div>
+            youtube動画検索
+            <input type="text" name="youtubekeyword">
+        </div>
+        <div>
+            <%# youtubeプレイリスト検索
+            <input type="text" name="playlist"> %>
+            <input type="submit" value="作成">
+            </div>
+    </form>
+</div>
+</body>
+</div>

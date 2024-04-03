@@ -1,0 +1,30 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<div class="container">
+<div class="row">
+<div class="col-lg-2">
+
+<div class="create">
+ <form action="/room/create" method="get">
+ <input type="submit" value="CREATE">
+</div>
+</form>
+
+<% @rooms.each do |room|%>
+<%=room.title%>
+<%=room.number%>
+<div class="join">
+<form action="/room/party/<%=room.id%>" method="post">
+ <input type="submit" value="JOIN">
+</form>
+</div>
+<% end %>
+
+</div>
+</div>
+</div>

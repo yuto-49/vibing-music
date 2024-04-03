@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Oi&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="room">
+<% @youtube_data.items.each do |item| %>
+  <% snippet = item.snippet %>
+  <p><%= snippet.title %></p>
+  <p><%= snippet.published_at %><%= snippet.channel_title %></p>
+  <div class="video">
+  <iframe width="1500" height="800" src="https://www.youtube.com/embed/<%= item.id.video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+<% end %>
+</body>
+
+<%# <iframe src="https://www.youtube.com/embed/videoseries?list=<%=@playlist%>
